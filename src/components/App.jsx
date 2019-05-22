@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Form from './Form';
+import ItemList from './ItemList';
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +11,8 @@ class App extends Component {
     return (
       <div>
         <h3>Liste de courses</h3>
-        <div>En construction</div>
+        <Form />
+        <ItemList />
       </div>
     );
   }
