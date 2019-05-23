@@ -1,8 +1,10 @@
 import React from 'react';
 
-const ItemList = () => {
+const ItemList = ({articles}) => {
     return ( 
-        <div>ItemList component</div>
+        <div>
+            {articles.map(article => <div key={article.id}>{article.quantity } {article.name}</div> )}
+        </div>
      );
 }
  

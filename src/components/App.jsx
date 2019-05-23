@@ -27,7 +27,7 @@ class App extends Component {
       <div>
         <h3>Liste de courses</h3>
         <Form formTitle="Ajouter un article" addArticle={this.addArticle}/>
-        <ItemList />
+        <ItemList articles={this.state.articles}/>
       </div>
     );
   }
