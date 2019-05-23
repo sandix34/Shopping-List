@@ -7,11 +7,17 @@ class App extends Component {
     super(props);
     this.state = {}
   }
+
+  addArticle = (article) => {
+    console.log('article vu par le parent app', article);
+    
+  }
+
   render() {
     return (
       <div>
         <h3>Liste de courses</h3>
-        <Form />
+        <Form formTitle="Ajouter un article" addArticle={this.addArticle}/>
         <ItemList />
       </div>
     );
