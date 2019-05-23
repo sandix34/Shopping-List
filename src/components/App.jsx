@@ -5,11 +5,20 @@ import ItemList from './ItemList';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      articles: []
+    }
   }
 
   addArticle = (article) => {
-    console.log('article vu par le parent app', article);
+    //on récupère l'état courrant
+    let oldArticles = this.state.articles;
+    // on crée un id avec Date.now
+    article.id = Date.now();
+    // on utilise le spread opérator pour ajouter un article et générer un nouveau tableau
+    let newArticles = [...oldArticles, article ];
+    // on modifie l'état
+    this.setState({ articles: newArticles })
     
   }
 
