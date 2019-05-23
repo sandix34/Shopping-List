@@ -1,3 +1,10 @@
+### Ce projet  a été réalisé dans le cadre de la formation e-learning "React & Redux" proposé par [CodeConcept](https://codeconcept.teachable.com/)  :fr: 
+
+## Fonctionnalités du projet
+
+- Une simple application de liste de course permettant de comprendre
+  le fonctionnement de Redux dans une application React
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
