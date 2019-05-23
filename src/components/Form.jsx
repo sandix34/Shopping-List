@@ -13,7 +13,9 @@ class Form extends Component {
 	handleSubmit = (event) => {
 		event.preventDefault();
 		console.log(this.state);
-		this.props.addArticle(this.state);	
+		this.props.addArticle(this.state);
+		// après soumission du formulaire on vide le formulaire
+		this.setState({ name:"", quantity:0 })	
 	}
 
 	render() {
