@@ -11,6 +11,7 @@ class App extends Component {
     }
   }
 
+  /*
   addArticle = (article) => {
     //on récupère l'état courrant
     let oldArticles = this.state.articles;
@@ -22,12 +23,20 @@ class App extends Component {
     this.setState({ articles: newArticles })
     
   }
+  */
+
+  addArticle = (article) => {
+    this.props.dispatch({
+      type: 'ADD_ARTICLE',
+      payload: article
+    });
+  }
 
   render() {
     return (
       <div>
         <h3>Liste de courses</h3>
-        <Form formTitle="Ajouter un article" addArticle={this.props.addArticle}/>
+        <Form formTitle="Ajouter un article" addArticle={this.addArticle}/>
         <ItemList articles={this.props.articles}/>
       </div>
     );
