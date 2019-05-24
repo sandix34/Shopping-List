@@ -21,7 +21,7 @@ const articlesReducer = (state = [], action) => {
 };
 
 // création du store
-const store = createStore(combineReducers({ articles: articlesReducer }));
+const store = createStore(combineReducers({ articles: articlesReducer }),  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 
