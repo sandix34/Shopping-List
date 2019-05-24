@@ -1,10 +1,12 @@
 import React from 'react';
 import Article from './Article';
 
-const ItemList = ({articles}) => {
+// TODO: corriger ==> Uncaught TypeError: Cannot read property 'id' of undefined
+
+const ItemList = (props) => {
     return ( 
         <div>
-            {articles.map(article => <Article data={article} key={article.id}/> )}
+            {props.articles.map(article => <Article data={article} key={article.id} editArticle={props.editArticle}/> )}
         </div>
      );
 }
