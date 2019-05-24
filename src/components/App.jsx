@@ -26,10 +26,9 @@ class App extends Component {
   */
 
   addArticle = (article) => {
-    this.props.dispatch({
-      type: 'ADD_ARTICLE',
-      payload: article
-    });
+    //this.props.dispatch({type: 'ADD_ARTICLE',payload: article});
+    this.props.addArticle(article);
+
   }
 
   render() {
@@ -49,5 +48,13 @@ const mapStateToProps = (state) => {
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addArticle: (article) => {
+      dispatch({ type: 'ADD_ARTICLE', payload: article });
+    }
+  }
+}
+
 //export default App;
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
