@@ -42,6 +42,13 @@ class App extends Component {
   }
 } //end class
 
+const addArticleActionCreator = (article) => {
+  return {
+    type: 'ADD_ARTICLE',
+    payload: article
+  }
+}
+
 const mapStateToProps = (state) => {
   return {
     articles: state.articles
@@ -51,7 +58,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     addArticle: (article) => {
-      dispatch({ type: 'ADD_ARTICLE', payload: article });
+      dispatch(addArticleActionCreator(article));
     }
   }
 }
