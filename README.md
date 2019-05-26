@@ -5,6 +5,8 @@
 - Une simple application de liste de course permettant de comprendre
   le fonctionnement de Redux dans une application React
 
+  ![shoppingList](https://user-images.githubusercontent.com/44428775/58384600-c6bba200-7fe3-11e9-8279-93a920201f5f.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

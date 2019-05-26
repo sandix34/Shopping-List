@@ -15,6 +15,7 @@ const articlesReducer = (state = [], action) => {
             action.payload.id = Date.now();
             const newState = [...state, action.payload];
             return newState;
+
         case 'EDIT_ARTICLE':
             console.log('EDIT_ARTICLE');
             const articleId = action.payload.id;
@@ -24,7 +25,7 @@ const articlesReducer = (state = [], action) => {
                 }
                 return article.payload
             })
-            
+        
               
         default:
             return state;
